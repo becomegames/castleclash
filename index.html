@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>城堡争霸 · Castle Clash 单机卡牌回合制</title>
-  <!-- Font Awesome 6 (免费图标库) 增加游戏感图标 -->
+  <title>Castle Clash · Turn-based Card Game</title>
+  <!-- Font Awesome 6 (Free icon library) for game-like icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- 引入现代但厚重感的字体：Cinzel + Rajdhani -->
+  <!-- Import modern but heavy font: Cinzel + Rajdhani -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
       box-sizing: border-box;
     }
 
-    /* 厚重、史诗感的游戏风格背景 */
+    /* Heavy, epic game-style background */
     body {
       background: #0c0a14;
       background-image: 
@@ -30,7 +30,7 @@
       min-height: 100vh;
     }
 
-    /* 厚重金属/羊皮纸面板 */
+    /* Heavy metal/parchment panel */
     .heavy-panel {
       background: #1e1a1e;
       background: linear-gradient(145deg, #241f23 0%, #181218 100%);
@@ -51,7 +51,7 @@
       opacity: 0.3;
     }
 
-    /* 标题字体华丽 */
+    /* Ornate title font */
     .game-title {
       font-family: 'Cinzel', serif;
       font-weight: 900;
@@ -80,7 +80,7 @@
       text-shadow: 2px 2px 0 #00000080;
     }
 
-    /* 团队标志 */
+    /* Team badge */
     .team-badge {
       background: #342e26;
       border: 3px ridge #b89165;
@@ -93,7 +93,7 @@
       display: inline-block;
     }
 
-    /* 导航栏 厚重护甲风格 */
+    /* Navigation bar - heavy armor style */
     .nav-links {
       display: flex;
       gap: 1rem;
@@ -131,7 +131,7 @@
       background: #4a3f35;
     }
 
-    /* 英雄区域 (城堡+卡牌氛围) */
+    /* Hero section (castle + card atmosphere) */
     .hero-section {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -179,7 +179,7 @@
       line-height: 1;
     }
 
-    /* 右侧卡牌展示 */
+    /* Right side card display */
     .hero-cards {
       display: flex;
       flex-wrap: wrap;
@@ -222,7 +222,7 @@
       border: 1px solid #bfa37c;
     }
 
-    /* 游戏特色区域 */
+    /* Game features section */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -260,7 +260,7 @@
       margin: 15px 0 10px;
     }
 
-    /* 卡牌技能预览 */
+    /* Card skills preview */
     .skill-wall {
       display: flex;
       flex-wrap: wrap;
@@ -286,7 +286,7 @@
       color: #d68f32;
     }
 
-    /* CTA 按钮区 */
+    /* CTA button section */
     .cta-section {
       text-align: center;
       margin: 80px 0 30px;
@@ -322,7 +322,7 @@
       color: #1f140a;
     }
 
-    /* 页脚 */
+    /* Footer */
     .footer {
       margin-top: 100px;
       border-top: 6px double #947856;
@@ -339,7 +339,7 @@
       border-bottom: 2px dotted #a17444;
     }
 
-    /* 语言标识 (简体中文) */
+    /* Language badge (English) */
     .lang-badge {
       background: #271f17;
       border: 2px solid #c5985b;
@@ -351,7 +351,7 @@
       gap: 10px;
     }
 
-    /* 响应式 */
+    /* Responsive */
     @media (max-width: 800px) {
       .hero-section { grid-template-columns: 1fr; }
       .game-title { font-size: 3rem; }
@@ -362,142 +362,142 @@
 <body>
   <div class="site-wrapper" style="max-width: 1400px; margin: 0 auto; padding: 20px;">
 
-    <!-- 头部 团队 & 语言 -->
+    <!-- Header - Team & Language -->
     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; margin: 20px 0 20px;">
       <div class="team-badge">
         <i class="fas fa-chess-king" style="margin-right: 12px;"></i> becomegames
       </div>
       <div class="lang-badge">
-        <i class="fas fa-language"></i> 简体中文 <span style="margin-left: 10px; color:#c5a039;">✓</span>
+        <i class="fas fa-language"></i> English <span style="margin-left: 10px; color:#c5a039;">✓</span>
       </div>
     </div>
 
-    <!-- 主导航 厚重面板 -->
+    <!-- Main navigation - heavy panel -->
      <!--
     <div class="nav-links heavy-panel" style="margin-top: 5px; padding: 1.5rem;">
-      <a href="#" class="nav-item"><i class="fas fa-crown"></i> 城堡</a>
-      <a href="#" class="nav-item"><i class="fas fa-scroll"></i> 卡牌册</a>
-      <a href="#" class="nav-item"><i class="fas fa-map-crown"></i> 征服地图</a>
-      <a href="#" class="nav-item"><i class="fas fa-hammer"></i> 铁匠铺</a>
-      <a href="#" class="nav-item"><i class="fas fa-book-sparkles"></i> 技能</a>
+      <a href="#" class="nav-item"><i class="fas fa-crown"></i> Castle</a>
+      <a href="#" class="nav-item"><i class="fas fa-scroll"></i> Card Book</a>
+      <a href="#" class="nav-item"><i class="fas fa-map-crown"></i> Conquest Map</a>
+      <a href="#" class="nav-item"><i class="fas fa-hammer"></i> Blacksmith</a>
+      <a href="#" class="nav-item"><i class="fas fa-book-sparkles"></i> Skills</a>
     </div>
     -->
 
-    <!-- 主标题 -->
+    <!-- Main title -->
     <div style="margin: 30px 0 20px;">
       <h1 class="game-title">Castle Clash</h1>
-      <div class="chinese-sub">城堡争霸 · 单机卡牌回合制游戏</div>
+      <div class="chinese-sub">Single Player Turn-based Card Game</div>
     </div>
 
-    <!-- Hero区域 城堡+卡牌简介 -->
+    <!-- Hero section - Castle + Card intro -->
     <div class="hero-section">
       <div class="hero-text heavy-panel" style="padding: 2.5rem;">
-        <h2 style="font-family: 'Cinzel'; font-size: 2.5rem; color: #eace9b; margin-bottom: 15px;"><i class="fas fa-chess-queen" style="margin-right: 15px;"></i> 崛起，领主！</h2>
-        <p>你拥有一座初始城堡，而地图上遍布等待征服的敌堡。在回合制对战中，打出卡牌，技能自动生效——<strong>攻击、防御、魔法、诅咒</strong>……每一次抽卡都可能扭转战局。升级装备，强化技能，让城堡旌旗蔽空！</p>
+        <h2 style="font-family: 'Cinzel'; font-size: 2.5rem; color: #eace9b; margin-bottom: 15px;"><i class="fas fa-chess-queen" style="margin-right: 15px;"></i> Rise, Lord!</h2>
+        <p>You own an initial castle, and the map is filled with enemy fortresses waiting to be conquered. In turn-based battles, play cards and skills automatically activate — <strong>attack, defense, magic, curses</strong>... Every draw can turn the tide of battle. Upgrade equipment, strengthen skills, and let your castle banners fill the sky!</p>
         <div class="hero-stats">
-          <div class="stat-block"><span class="stat-number">100+</span><br>卡牌技能</div>
-          <div class="stat-block"><span class="stat-number">10+</span><br>城堡点位</div>
-          <div class="stat-block"><span class="stat-number">∞</span><br>6卡灵活战术</div>
+          <div class="stat-block"><span class="stat-number">100+</span><br>Card Skills</div>
+          <div class="stat-block"><span class="stat-number">10+</span><br>Castle Locations</div>
+          <div class="stat-block"><span class="stat-number">∞</span><br>6-Card Tactics</div>
         </div>
       </div>
 
       <div class="hero-cards">
-        <!-- 卡牌类别1 -->
+        <!-- Card type 1 -->
         <div class="card-sample">
           <i class="fas fa-shield-hammer"></i>
-          <div class="card-name">诅咒/魔法</div>
-          <div style="margin-top: 15px; font-size:1rem; background: #342a1f; border-radius:12px; padding:6px;">防御+ • 攻击+</div>
+          <div class="card-name">Curse/Magic</div>
+          <div style="margin-top: 15px; font-size:1rem; background: #342a1f; border-radius:12px; padding:6px;">Defense+ • Attack+</div>
         </div>
-        <!-- 卡牌类别2 -->
+        <!-- Card type 2 -->
         <div class="card-sample" style="background: #1e282c;">
           <i class="fas fa-dragon"></i>
-          <div class="card-name">召唤神龙</div>
-          <div style="margin-top: 15px; font-size:1rem; background: #1e1c1a; border-radius:12px; padding:6px;">强力攻击 • 灼烧</div>
+          <div class="card-name">Summon Dragon</div>
+          <div style="margin-top: 15px; font-size:1rem; background: #1e1c1a; border-radius:12px; padding:6px;">Powerful Attack • Burn</div>
         </div>
-        <!-- 卡牌类别3 -->
+        <!-- Card type 3 -->
         <div class="card-sample" style="transform: rotate(1deg) translateY(10px);">
           <i class="fas fa-hand-sparkles"></i>
-          <div class="card-name">防御建造</div>
-          <div style="margin-top:15px; font-size:1rem; background:#31251c;">恢复 • 增强</div>
+          <div class="card-name">Defense Build</div>
+          <div style="margin-top:15px; font-size:1rem; background:#31251c;">Heal • Enhance</div>
         </div>
       </div>
     </div>
 
-    <!-- 技能标签墙 — 展示丰富的卡牌技能 -->
+    <!-- Skill tag wall - showcase rich card skills -->
     <div style="margin: 60px 0 20px;">
-      <h3 style="font-family: 'Cinzel'; font-size: 2.2rem; display: flex; align-items: center; gap: 15px;"><i class="fas fa-bolt" style="color:#dbb468;"></i> 卡牌技能·百变策略 <i class="fas fa-bolt" style="color:#dbb468;"></i></h3>
+      <h3 style="font-family: 'Cinzel'; font-size: 2.2rem; display: flex; align-items: center; gap: 15px;"><i class="fas fa-bolt" style="color:#dbb468;"></i> Card Skills · Versatile Strategies <i class="fas fa-bolt" style="color:#dbb468;"></i></h3>
       <div class="skill-wall">
-        <span class="skill-tag"><i class="fas fa-shield"></i> 坚守</span>
-        <span class="skill-tag"><i class="fas fa-fire"></i> 投石战车</span>
-        <span class="skill-tag"><i class="fas fa-skull"></i> 小试攻击</span>
-        <span class="skill-tag"><i class="fas fa-heart"></i> 潜心治愈</span>
-        <span class="skill-tag"><i class="fas fa-ghost"></i> 诅咒附魔</span>
-        <span class="skill-tag"><i class="fas fa-wind"></i> 飓风召唤</span>
-        <span class="skill-tag"><i class="fas fa-gem"></i> 资源优先</span>
-        <span class="skill-tag"><i class="fas fa-dragon"></i> 神龙出击</span>
-        <span class="skill-tag"><i class="fas fa-hat-wizard"></i> 奥术智慧</span>
-        <span class="skill-tag"><i class="fas fa-dungeon"></i> 地震传说</span>
-        <span class="skill-tag"><i class="fas fa-pray"></i> 骑士精神</span>
-        <span class="skill-tag"><i class="fas fa-meteor"></i> 陨石术</span>
+        <span class="skill-tag"><i class="fas fa-shield"></i> Hold the Line</span>
+        <span class="skill-tag"><i class="fas fa-fire"></i> Catapult</span>
+        <span class="skill-tag"><i class="fas fa-skull"></i> Test Attack</span>
+        <span class="skill-tag"><i class="fas fa-heart"></i> Healing Focus</span>
+        <span class="skill-tag"><i class="fas fa-ghost"></i> Curse Enchant</span>
+        <span class="skill-tag"><i class="fas fa-wind"></i> Hurricane Summon</span>
+        <span class="skill-tag"><i class="fas fa-gem"></i> Resource Priority</span>
+        <span class="skill-tag"><i class="fas fa-dragon"></i> Dragon Attack</span>
+        <span class="skill-tag"><i class="fas fa-hat-wizard"></i> Arcane Wisdom</span>
+        <span class="skill-tag"><i class="fas fa-dungeon"></i> Earthquake Legend</span>
+        <span class="skill-tag"><i class="fas fa-pray"></i> Chivalry</span>
+        <span class="skill-tag"><i class="fas fa-meteor"></i> Meteor Spell</span>
       </div>
-      <p style="text-align:right; font-size: 1.2rem; margin-top: 10px; opacity:0.8;">—— 自动结算，瞬息万变 ——</p>
+      <p style="text-align:right; font-size: 1.2rem; margin-top: 10px; opacity:0.8;">—— Automatic resolution, ever-changing ——</p>
     </div>
 
-    <!-- 游戏特色面板 (厚重感) -->
+    <!-- Game features panel (heavy feeling) -->
     <div class="features-grid">
       <div class="feature-item">
         <i class="fas fa-chess-board feature-icon"></i>
-        <div class="feature-title">征服之路</div>
-        <p>辽阔地图，数十座城堡盘踞。击败领主，收编守军，解锁新区域。</p>
+        <div class="feature-title">Conquest Path</div>
+        <p>Vast map with dozens of castles. Defeat lords, recruit defenders, unlock new regions.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-helmet-battle feature-icon"></i>
-        <div class="feature-title">装备铁砧</div>
-        <p>步兵、骑兵、射手、魔法……升级装备改变城堡能力值，打造专属。</p>
+        <div class="feature-title">Equipment Anvil</div>
+        <p>Infantry, cavalry, archers, magic... Upgrade equipment to change castle stats, create your unique build.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-scroll-old feature-icon"></i>
-        <div class="feature-title">技能法典</div>
-        <p>每个城堡都有独特的占领难度。消耗战利品强化技能，甚至解锁隐藏能力。</p>
+        <div class="feature-title">Skill Codex</div>
+        <p>Each castle has unique capture difficulty. Consume loot to strengthen skills, even unlock hidden abilities.</p>
       </div>
       <div class="feature-item">
         <i class="fas fa-dice-d20 feature-icon"></i>
-        <div class="feature-title">自动回合</div>
-        <p>轻松出牌，自动攻防。观看你的卡牌军团席卷敌人，真正单机策略。</p>
+        <div class="feature-title">Auto Turn</div>
+        <p>Easy card play, automatic attack and defense. Watch your card army sweep enemies, true single-player strategy.</p>
       </div>
     </div>
 
-    <!-- 升级 & 增强 高亮条 (游戏感元件) -->
+    <!-- Upgrade & Enhance highlight bar (game feeling element) -->
     <div style="background: #191113; border: 4px ridge #a77947; border-radius: 60px 8px 60px 8px; padding: 30px; margin: 50px 0; text-align: center; box-shadow: 0 15px 0 #1b1009, inset 0 0 35px #6a432a;">
       <i class="fas fa-arrow-up" style="font-size: 3rem; color: #dba650; display: block;"></i>
-      <span style="font-size: 2.2rem; font-weight: 900; font-family: 'Cinzel'; letter-spacing: 4px;">升级装备 · 增强技能</span>
-      <p style="font-size: 1.4rem; margin-top: 15px;">每一次铁匠铺的淬火，每一本技能典籍，都让你在回合中占据绝对主动。</p>
+      <span style="font-size: 2.2rem; font-weight: 900; font-family: 'Cinzel'; letter-spacing: 4px;">Upgrade Equipment · Enhance Skills</span>
+      <p style="font-size: 1.4rem; margin-top: 15px;">Every trip to the blacksmith, every skill tome, gives you absolute initiative in turns.</p>
     </div>
 
-    <!-- 行动呼吁 下载/了解更多 -->
+    <!-- Call to Action - Download/Learn more -->
     <div class="cta-section">
-      <a href="javascript:void(0);" class="download-btn" style="filter: grayscale(0.8);"><i class="fas fa-crown"></i> 等待征服</a>
-      <!-- <p style="margin-top: 30px; font-size: 1.2rem;"><i class="fas fa-gamepad"></i> 单机离线畅玩 · 随时开战</p> -->
-       <p style="margin-top: 30px; font-size: 1.2rem; color: #f7f9a5;"><i class="fas fa-gamepad"></i> 请耐心等待正在积极上线中...</p>
+      <a href="javascript:void(0);" class="download-btn" style="filter: grayscale(0.8);"><i class="fas fa-crown"></i> Awaiting Conquest</a>
+      <!-- <p style="margin-top: 30px; font-size: 1.2rem;"><i class="fas fa-gamepad"></i> Single-player offline play · Battle anytime</p> -->
+       <p style="margin-top: 30px; font-size: 1.2rem; color: #f7f9a5;"><i class="fas fa-gamepad"></i> Please wait, actively launching soon...</p>
     </div>
 
-    <!-- 页脚 包含github地址和版权 -->
+    <!-- Footer with github address and copyright -->
     <div class="footer">
       <div><i class="fas fa-copyright"></i> becomegames 2026 ·  <a href="#" target="_blank">https://becomegames.github.com</a></div>
       <div>
         <a href="#"><i class="fab fa-github"></i> GitHub Pages</a>  ·  
-        <a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私</a>  ·  
-        <span><i class="fas fa-flag"></i> 简中</span>
+        <a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy</a>  ·  
+        <span><i class="fas fa-flag"></i> English</span>
       </div>
     </div>
 
-    <!-- 装饰性底部城堡剪影 (游戏氛围) -->
+    <!-- Decorative bottom castle silhouettes (game atmosphere) -->
     <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; font-size: 2rem; color: #3b3229; opacity: 0.5;">
       <i class="fas fa-castle"></i><i class="fas fa-castle"></i><i class="fas fa-castle"></i>
     </div>
   </div>
 
-  <!-- 角落的厚重装饰 -->
+  <!-- Heavy decorative corners -->
   <div style="position: fixed; bottom: 10px; left: 10px; opacity: 0.2; pointer-events: none; font-size: 5rem;"><i class="fas fa-shield-halved"></i></div>
   <div style="position: fixed; top: 10px; right: 10px; opacity: 0.15; pointer-events: none; font-size: 7rem; transform: rotate(15deg);"><i class="fas fa-crown"></i></div>
 </body>
